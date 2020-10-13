@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
       "adminUsername": {
@@ -22,19 +22,19 @@
     },
     "variables": {
       "imagePublisher": "MicrosoftVisualStudio",
-      "imageOffer": "VisualStudio",
+      "imageOffer": "visualstudio2019latest",
       "imageSku": "vs-2019-comm-latest-ws2019",
       "OSDiskName": "projjumpvmosdisk",
       "nicName": "projjumpvmnic",
-      "addressPrefix": "10.1.0.0/16",
+      "addressPrefix": "172.1.0.0/16",
       "subnetName": "Jump-Subnet",
-      "subnetPrefix": "10.1.0.0/24",
+      "subnetPrefix": "172.1.0.0/24",
       "vhdStorageType": "Premium_LRS",
       "publicIPAddressName": "projjumpvmip",
       "publicIPAddressType": "Dynamic",
       "vhdStorageContainerName": "vhds",
       "vmName": "Proj-JumpVM",
-      "vmSize": "Standard_DS2_V3",
+      "vmSize": "Standard_DS2_V2",
       "virtualNetworkName": "Jump-VNet",
       "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
       "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
@@ -145,7 +145,7 @@
               "publisher": "[variables('imagePublisher')]",
               "offer": "[variables('imageOffer')]",
               "sku": "[variables('imageSku')]",
-              "version": "latest"
+              "version": "2020.09.10"
             },
             "osDisk": {
               "name": "osdisk",
