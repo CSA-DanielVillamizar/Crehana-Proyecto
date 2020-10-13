@@ -34,7 +34,7 @@
       "publicIPAddressType": "Dynamic",
       "vhdStorageContainerName": "vhds",
       "vmName": "Proj-JumpVM",
-      "vmSize": "Standard_DS2_V3",
+      "vmSize": "Standard_DS2_V2",
       "virtualNetworkName": "Jump-VNet",
       "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
       "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
