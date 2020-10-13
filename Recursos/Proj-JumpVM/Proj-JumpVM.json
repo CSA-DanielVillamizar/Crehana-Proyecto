@@ -22,7 +22,7 @@
     },
     "variables": {
       "imagePublisher": "MicrosoftVisualStudio",
-      "imageOffer": "VisualStudio",
+      "imageOffer": "visualstudio2019latest",
       "imageSku": "vs-2019-comm-latest-ws2019",
       "OSDiskName": "projjumpvmosdisk",
       "nicName": "projjumpvmnic",
@@ -145,7 +145,7 @@
               "publisher": "[variables('imagePublisher')]",
               "offer": "[variables('imageOffer')]",
               "sku": "[variables('imageSku')]",
-              "version": "latest"
+              "version": "2020.09.10"
             },
             "osDisk": {
               "name": "osdisk",
