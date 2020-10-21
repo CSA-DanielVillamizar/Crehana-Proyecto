@@ -15,6 +15,8 @@ ASP.NET, ASP.NET Core, Java, Ruby, Node.js, PHP o Python.
 
 #>
 
+# Iniciar Sesión
+Connect-AzAccount
 
 # Reemplace la siguiente dirección URL por una URL de repositorio de GitHub pública
 $gitrepo="https://github.com/Azure-Samples/app-service-web-dotnet-get-started.git"
