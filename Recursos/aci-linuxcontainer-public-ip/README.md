@@ -21,6 +21,8 @@ Esta plantilla muestra un caso de uso sencillo para [Azure Container Instances](
 </a>
 
 
+
+
 | NOMBRE DEL PARÁMETRO | DESCRIPCIÓN |
 |  -- | -- |
 | name | Nombre del grupo de contenedores.|
