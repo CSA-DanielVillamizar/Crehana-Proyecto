@@ -1,10 +1,10 @@
 {
   "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
   "type": "QuickStart",
-  "itemDisplayName": "Provision a function app on a dynamic hosting plan",
-  "description": "This template provisions a function app on a dynamic hosting plan, meaning it will be run on demand and billed per execution, with no standing resource committment. There are other templates available for provisioning on a dedicated hosting plan.",
-  "summary": "Provision a function app on a dynamic hosting plan",
-  "githubUsername": "mattchenderson",
+  "itemDisplayName": "Aprovisionar una aplicación de función en un plan de alojamiento dinámico",
+  "description": "Esta plantilla aprovisiona una aplicación de función en un plan de hospedaje dinámico, lo que significa que se ejecutará a petición y se facturará por ejecución, sin compromiso de recursos permanentes. Hay otras plantillas disponibles para el aprovisionamiento en un plan de hospedaje dedicado.",
+  "summary": "Aprovisionar una aplicación de función en un plan de alojamiento dinámico",
+  "githubUsername": "CSA-DanielVillamizar",
   "dateUpdated": "2018-10-10"
 }
 
