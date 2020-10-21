@@ -1,4 +1,28 @@
-﻿# Iniciar Sesión
+﻿<# Definición
+
+Azure Virtual Machines (VM) es uno de los diversos tipos de recursos informáticos a petición
+y escalables que ofrece Azure. Por lo general, elegirá una máquina virtual cuando necesite 
+más control sobre su entorno informático del que ofrecen las otras opciones. 
+
+Una máquina virtual de Azure le ofrece la flexibilidad de la virtualización sin necesidad de adquirir 
+y mantener el hardware físico que la ejecuta. Sin embargo, aún necesita mantener la máquina virtual 
+con tareas como configurar, aplicar revisiones e instalar el software que se ejecuta en ella.
+
+Las máquinas virtuales de Azure se pueden usar de diversas maneras. Ejemplos:
+
+Desarrollo y pruebas: las máquinas virtuales de Azure ofrecen una manera rápida y sencilla de crear un 
+equipo con configuraciones específicas necesarias para codificar y probar una aplicación.
+
+Aplicaciones en la nube: como la demanda de la aplicación puede fluctuar, tendría sentido desde 
+el punto de vista económico ejecutarla en una máquina virtual en Azure. Paga por las máquinas 
+virtuales adicionales cuando las necesite y las desactiva cuando ya no sean necesarias.
+
+Centro de datos ampliado: las máquinas virtuales de una red virtual de Azure se pueden conectar 
+fácilmente a la red de su organización.
+
+#>
+
+# Iniciar Sesión
 Connect-AzAccount
 
 # Variables para valores comunes
@@ -44,3 +68,6 @@ Add-AzVMNetworkInterface -Id $nic.Id
 
 # Crear una máquina virtual
 New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
+
+# Eliminar recursos creados
+Remove-AzResourceGroup -Name Crehana-RG-VM -Force

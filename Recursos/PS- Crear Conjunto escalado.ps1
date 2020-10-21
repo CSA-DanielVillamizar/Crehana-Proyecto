@@ -95,3 +95,7 @@ Update-AzVmss `
     -ResourceGroupName "Creahana-rg-Scaleset" `
     -Name "ScaleSet-Prod" `
     -VirtualMachineScaleSet $vmss
+
+
+# Eliminar recursos creados
+Remove-AzResourceGroup -Name Creahana-rg-Scaleset -Force
