@@ -31,3 +31,11 @@ PowerShell
 New-AzResourceGroup -Name <resource-group-name> -Location <resource-group-location> #utilice este comando cuando necesite crear un nuevo grupo de recursos para la implementación
 New-AzResourceGroupDeployment -ResourceGroupName <resource-group-name> -TemplateUri https://raw.githubusercontent.com/CSA-DanielVillamizar/Crehana-Proyecto/master/Recursos/function-app-create-dynamic/azuredeploy.json
 ```
+
+
+Línea de comandos CLI
+
+```cli
+az group create --name <resource-group-name> --location <resource-group-location> #utilice este comando cuando necesite crear un nuevo grupo de recursos para la implementación
+az group deployment create --resource-group <my-resource-group> --template-uri https://raw.githubusercontent.com/CSA-DanielVillamizar/Crehana-Proyecto/master/Recursos/function-app-create-dynamic/azuredeploy.json
+```
