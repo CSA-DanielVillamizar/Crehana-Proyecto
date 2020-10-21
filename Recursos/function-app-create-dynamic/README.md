@@ -24,3 +24,10 @@ Esta plantilla aprovisiona una aplicación de función en un plan de consumo, qu
 | | |
 
 
+Uso de la plantilla
+PowerShell
+
+```PowerShell
+New-AzResourceGroup -Name <resource-group-name> -Location <resource-group-location> #utilice este comando cuando necesite crear un nuevo grupo de recursos para la implementación
+New-AzResourceGroupDeployment -ResourceGroupName <resource-group-name> -TemplateUri https://raw.githubusercontent.com/CSA-DanielVillamizar/Crehana-Proyecto/master/Recursos/function-app-create-dynamic/azuredeploy.json
+```
