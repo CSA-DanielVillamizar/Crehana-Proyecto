@@ -1,4 +1,4 @@
-# Deployment of WordPress+MySQL Containers with Docker Compose
+# Implementación de contenedores WordPress+MySQL con Docker Compose
 
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/docker-wordpress-mysql/PublicLastTestDate.svg" />&nbsp;
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/docker-wordpress-mysql/PublicDeployment.svg" />&nbsp;
