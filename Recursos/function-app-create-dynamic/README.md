@@ -1,6 +1,6 @@
-# Provision a function app on a Consumption plan
+# Aprovisionar una aplicación de función en un plan de consumo
 
-**Important: if using an App Service Plan, use https://github.com/Azure/azure-quickstart-templates/tree/master/101-function-app-create-dedicated instead**
+**Importante: si utiliza un plan de App Service, use https://github.com/CSA-DanielVillamizar/Crehana-Proyecto/tree/master/Recursos/function-app-create-dedicated en lugar de**
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazure%2Fazure-quickstart-templates%2Fmaster%2F101-function-app-create-dynamic%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
@@ -9,4 +9,4 @@
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
-Azure functions is a solution for easily running small pieces of code, or "functions," in the cloud. You can write just the code you need for the problem at hand, without worrying about a whole application or the infrastructure to run it. For more information about Azure Functions, see the [Azure Functions Overview](https://azure.microsoft.com/en-us/documentation/articles/functions-overview/).
+Las funciones de Azure son una solución para ejecutar fácilmente pequeños fragmentos de código o "funciones" en la nube. Puede escribir solo el código que necesita para el problema en cuestión, sin preocuparse por toda una aplicación o la infraestructura para ejecutarlo. Para obtener más información acerca de Azure Functions, consulte [Azure Functions Overview](https://docs.microsoft.com/es-es/azure/azure-functions/functions-overview).
