@@ -1,6 +1,5 @@
 # Azure Container Instances - Contenedor Linux con IP pública
 
-https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fAzure%2fazure-quickstart-templates%2fmaster%2f101-aci-linuxcontainer-public-ip%2fazuredeploy.json
 
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/101-aci-linuxcontainer-public-ip/PublicLastTestDate.svg" />&nbsp;
 <IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/101-aci-linuxcontainer-public-ip/PublicDeployment.svg" />&nbsp;
@@ -13,6 +12,13 @@ https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.github
 
 Esta plantilla muestra un caso de uso sencillo para [Azure Container Instances](https://docs.microsoft.com/es-es/azure/container-instances/).
 
+
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fAzure%2fazure-quickstart-templates%2fmaster%2f101-aci-linuxcontainer-public-ip%2fazuredeploy.json" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-function-app-create-dedicated%2Fazuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
+</a>
 
 
 | NOMBRE DEL PARÁMETRO | DESCRIPCIÓN |
