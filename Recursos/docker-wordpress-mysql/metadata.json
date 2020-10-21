@@ -2,8 +2,8 @@
   "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
   "type": "QuickStart",
   "itemDisplayName": "Deploy a WordPress blog with Docker",
-  "description": "This template allows you to deploy an Ubuntu VM with Docker installed (using the Docker Extension) and WordPress/MySQL containers created and configured to serve a blog server.",
-  "summary": "Deploy a WordPress blog using Docker",
-  "githubUsername": "ahmetalpbalkan",
+  "description": "Esta plantilla le permite implementar una máquina virtual Ubuntu con Docker instalado (mediante la extensión docker) y contenedores de WordPress/MySQL creados y configurados para servir a un servidor de blog.",
+  "summary": "Implementar un blog de WordPress con Docker",
+  "githubUsername": "CSA-DanielVillamizar",
   "dateUpdated": "2019-05-03"
 }
