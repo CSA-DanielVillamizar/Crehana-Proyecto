@@ -32,7 +32,7 @@ az mysql server firewall-rule create -g $resourceGroup `
     --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
 
 # Crear una aplicación web a partir de un contenedor
-$appName="wordpress-1247"
+$appName="wordpress-crehana"
 az webapp create -n $appName -g $resourceGroup `
                  --plan $planName -i "wordpress"
 

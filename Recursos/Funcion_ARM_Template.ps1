@@ -6,3 +6,6 @@ New-AzResourceGroup -Name $resourceGroupName -Location "$location"
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateUri $templateUri
 
 Read-Host -Prompt "Pulse [ENTER] para continuar ..."
+
+
+# Eliminar recuros az group delete --name <RESOURCE_GROUP_NAME>
