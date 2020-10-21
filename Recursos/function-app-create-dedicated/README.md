@@ -29,7 +29,7 @@ Uso de la plantilla
 PowerShell
 
 ```PowerShell
-New-AzResourceGroup -Name <resource-group-name> -Location <resource-group-location> #use this command when you need to create a new resource group for your deployment
+New-AzResourceGroup -Name <resource-group-name> -Location <resource-group-location> #utilice este comando cuando necesite crear un nuevo grupo de recursos para la implementación
 New-AzResourceGroupDeployment -ResourceGroupName <resource-group-name> -TemplateUri https://raw.githubusercontent.com/CSA-DanielVillamizar/Crehana-Proyecto/master/Recursos/function-app-create-dedicated/azuredeploy.json
 ```
 
@@ -38,7 +38,7 @@ New-AzResourceGroupDeployment -ResourceGroupName <resource-group-name> -Template
 Línea de comandos CLI
 
 ```PowerShell
-az group create --name <resource-group-name> --location <resource-group-location> #use this command when you need to create a new resource group for your deployment
+az group create --name <resource-group-name> --location <resource-group-location> #utilice este comando cuando necesite crear un nuevo grupo de recursos para la implementación
 az group deployment create --resource-group <my-resource-group> --template-uri https://raw.githubusercontent.com/CSA-DanielVillamizar/Crehana-Proyecto/master/Recursos/function-app-create-dedicated/azuredeploy.json
 ```
 
