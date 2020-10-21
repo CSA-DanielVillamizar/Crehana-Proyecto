@@ -8,18 +8,18 @@ máquina virtual del conjunto de escalado.
 #>
 
 # Crear RG
-New-AzResourceGroup -ResourceGroupName "Creahana-rg-Scaleset" -Location "EastUS"
+New-AzResourceGroup -ResourceGroupName "Creahana-rg-Scaleset1" -Location "EastUS"
 
 # Crear conjunto de escalado de máquinas virtuales 
 
 New-AzVmss `
-  -ResourceGroupName "Creahana-rg-Scaleset" `
+  -ResourceGroupName "Creahana-rg-Scaleset1" `
   -Location "EastUS" `
   -VMScaleSetName "ScaleSet-Prod" `
-  -VirtualNetworkName "VM-Vnet-Prod" `
-  -SubnetName "VM-Subnet-FrontEnd" `
+  -VirtualNetworkName "VM-Vnet-Prod1" `
+  -SubnetName "VM-Subnet-FrontEnd1" `
   -PublicIpAddressName "VM-PublicIPAddress" `
-  -LoadBalancerName "VM-SS-LoadBalancer" `
+  -LoadBalancerName "VM-SS-LoadBalancer1" `
   -UpgradePolicyMode "Automatic"
 
 
@@ -33,8 +33,8 @@ $publicSettings = @{
 
 # Get information about the scale set
 $vmss = Get-AzVmss `
-            -ResourceGroupName "Creahana-rg-Scaleset" `
-            -VMScaleSetName "ScaleSet-Prod"
+            -ResourceGroupName "Creahana-rg-Scaleset1" `
+            -VMScaleSetName "ScaleSet-Prod1"
 
 # Use Custom Script Extension para instalar IIS y configurar el sitio web básico
 Add-AzVmssExtension -VirtualMachineScaleSet $vmss `
@@ -46,20 +46,20 @@ Add-AzVmssExtension -VirtualMachineScaleSet $vmss `
 
 # Actualice el conjunto de escalado y aplique la extensión de script personalizado a las instancias de máquina virtual
 Update-AzVmss `
-    -ResourceGroupName "Creahana-rg-Scaleset" `
-    -Name "ScaleSet-Prod" `
+    -ResourceGroupName "Creahana-rg-Scaleset1" `
+    -Name "ScaleSet-Prod1" `
     -VirtualMachineScaleSet $vmss
 
 # Permitir tráfico a la aplicación
 
 # Obtener información sobre el conjunto de escalado
 $vmss = Get-AzVmss `
-            -ResourceGroupName "Creahana-rg-Scaleset" `
-            -VMScaleSetName "ScaleSet-Prod"
+            -ResourceGroupName "Creahana-rg-Scaleset1" `
+            -VMScaleSetName "ScaleSet-Prod1"
 
 #Crear una regla para permitir el tráfico a través del puerto 80
 $nsgFrontendRule = New-AzNetworkSecurityRuleConfig `
-  -Name FrontendNSGRule `
+  -Name FrontendNSGRule1 `
   -Protocol Tcp `
   -Direction Inbound `
   -Priority 200 `
@@ -71,20 +71,20 @@ $nsgFrontendRule = New-AzNetworkSecurityRuleConfig `
 
 #Cree un grupo de seguridad de red y asócielo a la regla
 $nsgFrontend = New-AzNetworkSecurityGroup `
-  -ResourceGroupName  "Creahana-rg-Scaleset" `
+  -ResourceGroupName  "Creahana-rg-Scaleset1" `
   -Location EastUS `
   -Name FrontendNSG `
   -SecurityRules $nsgFrontendRule
 
 $vnet = Get-AzVirtualNetwork `
-  -ResourceGroupName "Creahana-rg-Scaleset" `
+  -ResourceGroupName "Creahana-rg-Scaleset1" `
   -Name VM-Vnet-Prod
 
 $frontendSubnet = $vnet.Subnets[0]
 
 $frontendSubnetConfig = Set-AzVirtualNetworkSubnetConfig `
   -VirtualNetwork $vnet `
-  -Name VM-Subnet-FrontEnd `
+  -Name VM-Subnet-FrontEnd1 `
   -AddressPrefix $frontendSubnet.AddressPrefix `
   -NetworkSecurityGroup $nsgFrontend
 
@@ -92,8 +92,8 @@ Set-AzVirtualNetwork -VirtualNetwork $vnet
 
 # Actualice el conjunto de escalado y aplique la extensión de script personalizado a las instancias de máquina virtual
 Update-AzVmss `
-    -ResourceGroupName "Creahana-rg-Scaleset" `
-    -Name "ScaleSet-Prod" `
+    -ResourceGroupName "Creahana-rg-Scaleset1" `
+    -Name "ScaleSet-Prod1" `
     -VirtualMachineScaleSet $vmss
 
 
