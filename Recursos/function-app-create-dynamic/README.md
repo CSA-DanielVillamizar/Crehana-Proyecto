@@ -14,9 +14,13 @@ Las funciones de Azure son una solución para ejecutar fácilmente pequeños fra
 
 Esta plantilla aprovisiona una aplicación de función en un plan de consumo, que es un plan de hospedaje dinámico. La aplicación se ejecuta a petición y se le factura por ejecución, sin compromiso de recursos permanentes. Hay otras plantillas disponibles para el aprovisionamiento en un plan de hospedaje dedicado.
 
-Parámetros
-NOMBRE DEL PARÁMETRO	DESCRIPCIÓN
-appName	The name of the function app that you wish to create.
-storageAccountType	Storage Account type
-location	Location for all resources.
-runtime	The language worker runtime to load in the function app.
+
+| NOMBRE DEL PARÁMETRO | DESCRIPCIÓN |
+|  -- | -- |
+| appName | El nombre de la aplicación de función que desea crear.|
+| storageAccountType | Tipo de cuenta de almacenamiento. |
+| location | Ubicación de todos los recursos.|
+| runtime | El tiempo de ejecución de trabajo de lenguaje que se cargará en la aplicación de función. |
+| | |
+
+
