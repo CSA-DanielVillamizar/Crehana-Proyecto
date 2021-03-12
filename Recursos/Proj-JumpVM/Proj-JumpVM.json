@@ -22,9 +22,9 @@
     },
     "variables": {
       "imagePublisher": "MicrosoftVisualStudio",
-      "imageOffer": "visualstudio2019", // Se realiza cambio 11/03/2021
-      "imageSku": "vs-2019-ent-ws2019", // Se realiza cambio 11/03/2021
-      "version": "latest", // Se realiza cambio 11/03/2021
+      "imageOffer": "visualstudio2019", 
+      "imageSku": "vs-2019-ent-ws2019", 
+      "version": "latest", 
       "OSDiskName": "projjumpvmosdisk",
       "nicName": "projjumpvmnic",
       "addressPrefix": "172.1.0.0/16",
@@ -146,7 +146,7 @@
               "publisher": "[variables('imagePublisher')]",
               "offer": "[variables('imageOffer')]",
               "sku": "[variables('imageSku')]",
-              "version": "latest" // Se realiza cambio 11/03/2021
+              "version": "latest" 
             },
             "osDisk": {
               "name": "osdisk",
