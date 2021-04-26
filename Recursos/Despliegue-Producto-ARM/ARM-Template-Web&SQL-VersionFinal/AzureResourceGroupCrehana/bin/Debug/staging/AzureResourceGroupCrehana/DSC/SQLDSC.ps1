@@ -18,20 +18,20 @@ Node $nodeName
 		if($disks -ne $null)
 		{
 			# Create a new storage pool using all available disks 
-			New-StoragePool –FriendlyName "VMStoragePool" `
-				–StorageSubsystemFriendlyName "Storage Spaces*" `
-				–PhysicalDisks (Get-PhysicalDisk –CanPool $True)
+			New-StoragePool â€“FriendlyName "VMStoragePool" `
+				â€“StorageSubsystemFriendlyName "Storage Spaces*" `
+				â€“PhysicalDisks (Get-PhysicalDisk â€“CanPool $True)
 
 			# Return all disks in the new pool
-			$disks = Get-StoragePool –FriendlyName "VMStoragePool" `
+			$disks = Get-StoragePool â€“FriendlyName "VMStoragePool" `
 					-IsPrimordial $false | 
 					Get-PhysicalDisk
 
 			# Create a new virtual disk 
-			New-VirtualDisk –FriendlyName "DataDisk" `
+			New-VirtualDisk â€“FriendlyName "DataDisk" `
 				-ResiliencySettingName Simple `
-						–NumberOfColumns $disks.Count `
-						–UseMaximumSize –Interleave 256KB `
+						â€“NumberOfColumns $disks.Count `
+						â€“UseMaximumSize â€“Interleave 256KB `
 						-StoragePoolFriendlyName "VMStoragePool" 
 
 			# Format the disk using NTFS and mount it as the F: drive
@@ -68,7 +68,7 @@ Node $nodeName
 		Invoke-Sqlcmd -ServerInstance Localhost -Database "master" -Query "ALTER LOGIN sa WITH PASSWORD = 'Cr3h4n42020.'"
 
 		# Download the SimplCommerce database backup 
-		$dbsource = "https://dvillamizar.blob.core.windows.net/website/simplcommerce.bak"
+		$dbsource = "https://pdtitlabsstorage.blob.core.windows.net/templates/SimplCommerce/simplcommerce.bak"
 		$dbbackupfile = "C:\SQLDATA\simplcommerce.bak"
 		$dbdestination = "C:\SQLDATA\simplcommerce.bak"
 
@@ -93,7 +93,7 @@ Node $nodeName
 
 
 		#allow connection to SQL Instance
-		New-NetFirewallRule -DisplayName "SQL Server" -Direction Inbound –Protocol TCP –LocalPort 1433 -Action allow 
+		New-NetFirewallRule -DisplayName "SQL Server" -Direction Inbound â€“Protocol TCP â€“LocalPort 1433 -Action allow 
 		}
 		}
      GetScript = {@{Result = "ConfigureSql"}}
